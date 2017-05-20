@@ -115,12 +115,12 @@ class FlightsController < ApplicationController
        if @search_departing_flights.count == 1
         @exact_departing_flight = @search_departing_flights[0]
       elsif @search_departing_flights.count > 1
-        @exact_departing_flight = @search_departing_flights.sort_by{ |m| m.schedule.strftime('%I:%M').to_i - "12:00".to_i}.last   
+        @exact_departing_flight = @search_departing_flights.sort_by{ |m| (m.schedule.strftime('%H:%M').to_i - "12:00".to_i).abs}.first   
       end
       if @search_returning_flights.count == 1
         @exact_returning_flight = @search_returning_flights[0]
       elsif @search_returning_flights.count > 1
-        @exact_returning_flight = @search_returning_flights.sort_by{ |m| m.schedule.strftime('%I:%M').to_i - "12:00".to_i}.last   
+        @exact_returning_flight = @search_returning_flights.sort_by{ |m| (m.schedule.strftime('%H:%M').to_i - "12:00".to_i).abs}.first   
       end
     else
       respond_to do |format|
