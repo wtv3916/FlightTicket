@@ -1,12 +1,13 @@
  <% if user_signed_in? %>
  <% if @exact_departing_flight.present? && @exact_returning_flight.present? %>
- <h4 class="card-header">Wow, we found a great deal for you!</h4>
+ <h4 class="card-header"><i class="fa fa-smile-o" aria-hidden="true"></i> Wow, we found a great deal for you!</h4>
  <div class="card-block">
  	<ul class="list-group">
  		<li class="list-group-item">
- 			<div>Departing: <%= @exact_departing_flight.flight %>   <small class="badge badge-default badge-pill">Price: <%= @lowest_departing_price %></small></div> <span>---</span>
- 			<div>Returning: <%= @exact_returning_flight.flight %>   <small class="badge badge-default badge-pill">Price: <%= @lowest_returning_price %></small></div>
- 			<span class="pull-xs-right">In total: <%= @lowest_departing_price + @lowest_returning_price %></span>
+ 			<span class="glyphicon glyphicon-plane"></span>Departing: <%= @exact_departing_flight.flight %>   <small class="badge badge-default badge-pill">Price: ￥<%= @lowest_departing_price %></small> 
+ 			<i class="fa fa-arrows-h" id="arrow_custom" aria-hidden="true"></i>
+ 			<span class="glyphicon glyphicon-plane"></span>Returning: <%= @exact_returning_flight.flight %>   <small class="badge badge-default badge-pill">Price: ￥<%= @lowest_returning_price %></small>
+ 			<span class="intotal">In total: ￥<%= @lowest_departing_price + @lowest_returning_price %></span>
  		</li>
  	</ul>
  </br>
