@@ -1,4 +1,3 @@
-
 document.addEventListener("turbolinks:load", function(){
 	$(".alert").show().delay(2000).fadeOut();
 	$("#one-way-radio").change(function(){
