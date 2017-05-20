@@ -29,7 +29,7 @@ flights = Flight.create([{ flight: 'GD2501',\
 	                       weekdays_reg_price: 1600 ,\
 	                       weekdays_rew_price: 1100 ,\
 	                       weekends_reg_price: 600 ,\
-	                       weekends_rew_price: 500 },\
+	                       weekends_rew_price: 400 },\
 	                       { flight: 'GD2607',\
 	                       schedule: "16:25",\
 	                       from: 'Chengdu' ,\
