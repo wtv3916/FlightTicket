@@ -1,0 +1,57 @@
+<%= form_for(flight) do |f| %>
+  <% if flight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flight.errors.count, "error") %> prohibited this flight from being saved:</h2>
+
+      <ul>
+      <% flight.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :flight %>
+    <%= f.text_field :flight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :schedule %>
+    <%= f.datetime_select :schedule %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from %>
+    <%= f.text_field :from %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to %>
+    <%= f.text_field :to %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weekdays_reg_price %>
+    <%= f.number_field :weekdays_reg_price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weekdays_rew_price %>
+    <%= f.number_field :weekdays_rew_price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weekends_reg_price %>
+    <%= f.number_field :weekends_reg_price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weekends_rew_price %>
+    <%= f.number_field :weekends_rew_price %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

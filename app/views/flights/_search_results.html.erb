@@ -1,0 +1,15 @@
+ <% if user_signed_in? %>
+ <% if @exact_departing_flight.present? && @exact_returning_flight.present? %>
+ <h4 class="card-header"></h4>
+ <div class="card-block">
+ 	<ul class="list-group">
+ 		<li class="list-group-item">
+ 			<div>Departing: <%= @exact_departing_flight.flight %>   <small class="badge badge-default badge-pill">Price: <%= @lowest_departing_price %></small></div> <span>---</span>
+ 			<div>Returning: <%= @exact_returning_flight.flight %>   <small class="badge badge-default badge-pill">Price: <%= @lowest_returning_price %></small></div>
+ 			<span class="pull-xs-right">In total: <%= @lowest_departing_price + @lowest_returning_price %></span>
+ 		</li>
+ 	</ul>
+ </br>
+</div>
+<% end %>
+<% end %>

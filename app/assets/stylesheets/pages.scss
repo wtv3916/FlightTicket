@@ -1,0 +1,60 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Top Nav Bar
+// nav bar bottom shadow
+.navbar{
+-webkit-box-shadow:0px 1px 1px grey;
+-moz-box-shadow:0px 1px 1px grey;
+box-shadow:0px 1px 25px black;
+}
+.navbar-custom{
+background-color: #3192d4;
+color:white;
+}
+#navbar-toggler-icon-custom {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+#navbar-right-button-custom{
+border-color:white;
+}
+.navbar-toggler-icon,
+.navbar-brand,
+.nav-link{
+color:white !important;
+}
+// main container
+body{
+background: url("./bg.jpg") no-repeat;
+}
+.container{
+margin-top:100px;
+height:100%;
+min-height:1000px;
+}
+.card-block{
+padding:15px 15px;
+}
+.type-radio{
+margin:0 5px;
+}
+.form-horizontal{
+padding:5px 5px;
+}
+.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-top{
+margin-top:100px!important;
+}
+// Search result card 
+#search-results{
+margin-top: 50px;
+display:none;
+}
+// Log in page
+#new_user{
+
+padding: 15px 15px;
+width: 40%;
+height: 100%;
+min-width: 200px;
+}

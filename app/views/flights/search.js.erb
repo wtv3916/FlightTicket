@@ -1,0 +1,5 @@
+$("#search-results").empty().append("<%= j render(:partial => 'flights/search_results') %>");
+$("#search-results").show();
+$('html, body').animate({
+	scrollTop: $("#search-results").offset().top
+}, 500);

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= yield(:title) %> | GD Airline</title>
+	<%= csrf_meta_tags %>
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+	<header class="topnavbar-container">
+		<%= render partial: "layouts/partials/topnavbar" %>
+	</header>
+	<div class="container">
+		<%= yield %>	
+	</div>
+	<footer>
+		<%= render partial: "layouts/partials/footer" %>	
+	</footer>
+	<!-- Upgrade Modal -->
+	<div class="modal fade" id="upgradeModal" tabindex="-1" role="dialog" aria-labelledby="upgradeModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="upgradeModal">Plan</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<% if regular? %>
+				<div class="modal-body">
+					Want to get the lowest price? Upgrade to a Reward Member now only $100/yr.
+				</div>
+				<% elsif reward? %>
+				<div class="modal-body">
+					Don't want to travel this year? Return to the free Regular Member.
+				</div>
+				<% end %>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<form method="post" action="/upgrade" data-remote="true">
+						<input type="submit" class="btn btn-primary"/>					
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

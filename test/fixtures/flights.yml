@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flight: MyString
+  schedule: 2017-05-18 11:10:28
+  from: MyString
+  to: MyString
+  weekdays_reg_price: 1
+  weekdays_rew_price: 1
+  weekends_reg_price: 1
+  weekends_rew_price: 1
+
+two:
+  flight: MyString
+  schedule: 2017-05-18 11:10:28
+  from: MyString
+  to: MyString
+  weekdays_reg_price: 1
+  weekdays_rew_price: 1
+  weekends_reg_price: 1
+  weekends_rew_price: 1
