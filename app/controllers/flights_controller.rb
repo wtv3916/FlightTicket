@@ -111,7 +111,6 @@ class FlightsController < ApplicationController
         end
       end
     end
-    Rails.logger.debug("!!!#{@lowest_departing_price}")
        # Check if there are more flights have the same price.
        if @search_departing_flights.count == 1
         @exact_departing_flight = @search_departing_flights[0]

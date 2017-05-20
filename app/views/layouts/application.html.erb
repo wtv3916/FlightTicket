@@ -19,6 +19,8 @@
 		<%= render partial: "layouts/partials/footer" %>	
 	</footer>
 	<!-- Upgrade Modal -->
+	<!-- Only for logged in users -->
+	<% if user_signed_in? %>
 	<div class="modal fade" id="upgradeModal" tabindex="-1" role="dialog" aria-labelledby="upgradeModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -46,5 +48,6 @@
 			</div>
 		</div>
 	</div>
+	<% end %>
 </body>
 </html>
